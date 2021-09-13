@@ -1,8 +1,11 @@
 up:
-	docker-compose up -d
+	docker-compose up -d --remove-orphans
 
-down: 
+down:
 	docker-compose down
 
-up-prod:
+prod:
 	docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
+
+build:
+	docker-compose build
